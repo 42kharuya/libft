@@ -1,4 +1,4 @@
-#This is to execute without relink
+#This is to execute with relink
 SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
 		ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
@@ -17,23 +17,20 @@ CC		= cc
 RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror
 
-ifdef WITH_BONUS
-    OBJS += $(OBJS_BONUS)
-endif
-
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+bonus: $(OBJS_BONUS)
+	touch bonus
+	ar rcs $(NAME) $(OBJS_BONUS)
+
 all: $(NAME)
 
-bonus:
-	@make WITH_BONUS=1
-
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS) $(OBJS_BONUS) bonus
 
 fclean:	clean
 	$(RM) $(NAME)

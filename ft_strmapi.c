@@ -6,7 +6,7 @@
 /*   By: kharuya <kharuya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:56:37 by kharuya           #+#    #+#             */
-/*   Updated: 2024/05/15 23:37:22 by kharuya          ###   ########.fr       */
+/*   Updated: 2024/05/24 14:39:21 by kharuya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = -1;
 	while (s[++i])
-	{
 		ans[i] = f(i, s[i]);
-		if (!ans[i])
-		{
-			free(ans);
-			return (NULL);
-		}
-	}
 	ans[i] = '\0';
 	return (ans);
 }

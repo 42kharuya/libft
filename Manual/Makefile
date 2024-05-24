@@ -24,7 +24,6 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS_BONUS)
-	touch bonus
 	ar rcs $(NAME) $(OBJS_BONUS)
 
 all: $(NAME)

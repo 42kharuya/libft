@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kharuya <kharuya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: kharuya <haruya.0411.k@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:49:13 by kharuya           #+#    #+#             */
-/*   Updated: 2024/05/14 15:30:10 by kharuya          ###   ########.fr       */
+/*   Updated: 2025/02/18 16:58:45 by kharuya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long	ft_overflow(const char *str, long ans, int sign)
+static int	ft_overflow(const char *str, int ans, int sign)
 {
 	int	digit;
 
 	digit = *str - 48;
-	if (sign == 1 && (LONG_MAX - (long)digit) / 10 < ans)
-		return (LONG_MAX);
-	if (sign == -1 && (LONG_MIN + (long)digit) / 10 > -ans)
-		return (LONG_MIN);
+	if (sign == 1 && (INT_MAX - digit) / 10 < ans)
+		return (INT_MAX);
+	if (sign == -1 && (INT_MIN + digit) / 10 > -ans)
+		return (INT_MIN);
 	else
 		return (1);
 }
@@ -28,7 +28,7 @@ static long	ft_overflow(const char *str, long ans, int sign)
 int	ft_atoi(const char *str)
 {
 	int		sign;
-	long	ans;
+	int		ans;
 	int		check_overflow;
 
 	sign = 1;

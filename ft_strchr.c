@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kharuya <kharuya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: kharuya <haruya.0411.k@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:50:09 by kharuya           #+#    #+#             */
-/*   Updated: 2024/05/14 09:48:09 by kharuya          ###   ########.fr       */
+/*   Updated: 2025/03/12 22:58:11 by kharuya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *src, int c)
 {
 	char	*s;
 
+	if (!src)
+		return (NULL);
 	s = (char *)src;
 	while (*s)
 	{

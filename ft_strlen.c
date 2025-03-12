@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kharuya <kharuya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: kharuya <haruya.0411.k@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:50:18 by kharuya           #+#    #+#             */
-/*   Updated: 2024/05/14 10:28:14 by kharuya          ###   ########.fr       */
+/*   Updated: 2025/03/12 22:57:49 by kharuya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
+	if (!str)
+		return (0);
 	i = 0;
 	while (str[i])
 		i++;
 	return (i);
 }
-
 // static void check_strlen(size_t actual,size_t expected)
 // {
 // 	printf("%zu,%zu",actual,expected);

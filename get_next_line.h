@@ -6,7 +6,7 @@
 /*   By: kharuya <haruya.0411.k@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 23:01:35 by kharuya           #+#    #+#             */
-/*   Updated: 2025/03/12 23:03:15 by kharuya          ###   ########.fr       */
+/*   Updated: 2025/03/12 23:04:24 by kharuya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include "libft.h"
 
 // buffer
 # ifndef BUFFER_SIZE

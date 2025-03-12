@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kharuya <kharuya@student.42.fr>            +#+  +:+       +#+        */
+/*   By: kharuya <haruya.0411.k@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 21:55:04 by kharuya           #+#    #+#             */
-/*   Updated: 2024/05/13 19:26:36 by kharuya          ###   ########.fr       */
+/*   Updated: 2025/03/12 23:10:08 by kharuya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
+# include "get_next_line.h"
 
 //part1
 int		ft_isalpha(int c);
